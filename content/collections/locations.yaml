@@ -1,6 +1,8 @@
 title: Locations
-route: 'locations/{slug}'
+template: location/single
 blueprints:
   - locations
-orderable: true
+taxonomies:
+  - adventure_type
 revisions: false
+route: 'locations/{slug}'

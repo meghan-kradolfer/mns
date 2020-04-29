@@ -1,22 +1,32 @@
 title: Default
-fields:
-  -
-    handle: content
-    field:
-      type: markdown
-      display: Content
-      localizable: true
-  -
-    handle: author
-    field:
-      type: users
-      display: Author
-      default: current
-      localizable: true
-      max_items: 1
-  -
-    handle: template
-    field:
-      type: template
-      display: Template
-      localizable: true
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: content
+        field:
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          localizable: false
+          listable: hidden
+          display: Content

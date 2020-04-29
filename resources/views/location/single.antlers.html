@@ -1,0 +1,19 @@
+<section class="row">
+	<div class="col-12">
+		<div class="bg-image main" {{ assets:featured_image }}style="background-image: url({{ glide:url width='2000' }}); background-position: {{ focus_css }};" {{ /assets:featured_image }}>
+			<div class="row sub-title text-white align-center">
+				<div class="col-6">
+					<h1>{{ title }}</h1>
+				</div>
+				<div class="col-6 text-right">
+					<h5><i class="fas fa-map-marker-alt"></i> {{ location_region }}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 rte">
+		<h4>Information</h4>
+		{{ content }}
+	</div>
+</section>

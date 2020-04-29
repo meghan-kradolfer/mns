@@ -1,9 +1,17 @@
-{{ content }}
+{{ if content }}
+	<section class="content pb-4">
+		<div class="row">
+			<div class="col-12">
+				{{ content }}
+			</div>
+		</div>
+	</section>
+{{ /if}}
 
 <section class="locations">
 	<div class="row">
 		{{ collection from="locations" sort="random"}}
-		<div class="col-4">
+		<div class="col-lg-4 col-md-6 col-sm-6">
 			{{ partial:location/excerpt }}
 		</div>
 		{{ /collection }}
