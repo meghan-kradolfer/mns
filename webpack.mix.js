@@ -13,12 +13,22 @@ require('laravel-mix-purgecss');
 
 mix.js('resources/js/site.js', 'public/js')
 
-mix.postCss('resources/css/tailwind.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('postcss-nested'),
-    require('postcss-preset-env')({stage: 0})
-])
+mix
+.webpackConfig({
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, 'public/')
+		}
+	}
+})
+.sass('resources/sass/styles.scss', 'public/css')
+.options({
+	postCss: [
+		require('autoprefixer')({
+			grid: true
+		})
+	]
+});
 
 if (mix.inProduction()) {
    mix.version();

@@ -1,0 +1,317 @@
+@mixin scrollbar(
+    $width: 5px,
+    $colour: $colour-secondary,
+    $background: $colour-white,
+    $shadow: inset 0 0 6px rgba(0, 0, 0, 0.2)
+) {
+    &::-webkit-scrollbar {
+        width: $width;
+        max-height: $width;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: $shadow;
+        background-color: $background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $colour;
+    }
+}
+
+@mixin flex(
+    $display: flex,
+    $justify: false,
+    $size: false,
+    $align-items: false,
+    $align-content: center,
+    $wrap: wrap,
+    $direction: row
+) {
+    // Flex
+    @if $display == 'flex' {
+        display: flex;
+    }
+
+    // Flex
+    @if $direction {
+        flex-direction: $direction;
+    }
+
+    // Wrap
+    @if $wrap == 'wrap' {
+        flex-wrap: wrap;
+    } @else if $wrap == 'nowrap' {
+        flex-wrap: nowrap;
+    }
+
+    // Justify
+    @if $justify == 'end' {
+        justify-content: flex-end;
+    } @else if $justify == 'start' {
+        justify-content: flex-start;
+    } @else if $justify == 'center' {
+        justify-content: center;
+    } @else if $justify == 'space-between' {
+        justify-content: space-between;
+    }
+
+    // Align items
+    @if $align-items == 'end' {
+        align-items: flex-end;
+    } @else if $align-items == 'start' {
+        align-items: flex-start;
+    } @else if $align-items == 'center' {
+        align-items: center;
+    }
+
+    // Align content
+    @if $align-content {
+        align-content: $align-content;
+    }
+
+    // Size
+    @if $size {
+        flex: $size;
+    }
+}
+
+@mixin box-shadow($shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)) {
+    box-shadow: $shadow;
+}
+
+@mixin transition($type: all, $speed: 0.25s) {
+    transition: $type $speed;
+    transition-timing-function: ease-in-out;
+}
+
+@mixin button(
+    $colour: inherit,
+    $hover: $colour-secondary,
+    $background: false,
+    $border: false,
+    $arrow: false,
+    $font: primary
+) {
+    cursor: pointer;
+    color: $colour;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+
+    @if $background {
+        background: $background;
+        padding: $column-gap/2 $column-gap;
+        text-align: center;
+
+        @include mobile-down {
+            padding: $column-gap/2;
+        }
+    } @else {
+        background: transparent;
+    }
+
+    @if ($arrow == '>') {
+        padding-right: 15px;
+
+        &:after {
+            content: $arrow;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    @if ($arrow == '<') {
+        padding-left: 15px;
+
+        &:before {
+            content: $arrow;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    @if $border {
+        border: 1px solid $border;
+        padding: 10px $column-gap;
+        border-radius: 100px;
+        text-align: center;
+        display: inline-block;
+
+        @include mobile-down {
+            padding: 10px $column-gap/2;
+        }
+    }
+
+	font-family: $font-primary;
+	font-size: 16px;
+	letter-spacing: 0.04em;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @if $border {
+            border-color: $colour-flamingo;
+        }
+
+        @if ($arrow) {
+            &:before,
+            &:after {
+                color: $colour-flamingo;
+            }
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+@mixin mobile-down {
+    @media all and (max-width: $screen-small) {
+        @content;
+    }
+}
+
+@mixin tablet-down {
+    @media all and (max-width: $screen-medium) {
+        @content;
+    }
+}
+
+@mixin desktop-down {
+    @media all and (max-width: $screen-large) {
+        @content;
+    }
+}
+
+@mixin mobile-up {
+    @media all and (min-width: $screen-small) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media all and (min-width: $screen-medium) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media all and (min-width: $screen-large) {
+        @content;
+    }
+}
+
+@mixin print {
+    @media only print {
+        @content;
+    }
+}
+
+@mixin column($width, $margin) {
+    flex: calc(#{$width} - #{$margin});
+    max-width: calc(#{$width} - #{$margin});
+    width: calc(#{$width} - #{$margin});
+    margin: 0 $margin/2;
+
+    .no-gutters & {
+        margin: 0;
+        flex: $width;
+        max-width: $width;
+        width: $width;
+    }
+}
+
+@mixin make-grid($margin) {
+    // All breakpoints
+    @for $i from 1 through $grid-columns {
+        $width: percentage(($i / $grid-columns));
+        .col-#{$i} {
+            @include column($width, $margin);
+        }
+    }
+
+    // Small breakpoints
+    @for $i from 1 through $grid-columns {
+        $width: percentage(($i / $grid-columns));
+        @include mobile-down {
+            .col-sm-#{$i} {
+                @include column($width, $margin);
+            }
+        }
+    }
+
+    // Medium breakpoints
+    @for $i from 1 through $grid-columns {
+        $width: percentage(($i / $grid-columns));
+
+        @include mobile-up {
+            .col-md-#{$i} {
+                @include column($width, $margin);
+            }
+        }
+    }
+
+    // Large breakpoints
+    @for $i from 1 through $grid-columns {
+        $width: percentage(($i / $grid-columns));
+
+        @include desktop-up {
+            .col-lg-#{$i} {
+                @include column($width, $margin);
+            }
+        }
+    }
+}
+
+@mixin make-padding($max) {
+    @for $i from 0 through $max {
+        .py-#{$i} {
+            padding-top: #{$i}0px;
+            padding-bottom: #{$i}0px;
+        }
+        .px-#{$i} {
+            padding-left: #{$i}0px;
+            padding-right: #{$i}0px;
+        }
+        .pt-#{$i} {
+            padding-top: #{$i}0px;
+        }
+        .pb-#{$i} {
+            padding-bottom: #{$i}0px;
+        }
+    }
+}
+
+@mixin headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @content;
+    }
+}
+
+@mixin content {
+    p,
+    li,
+    strong,
+    small,
+    i,
+    a {
+        @content;
+    }
+}
+
+@mixin gradient {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.05) 60%
+    );
+}

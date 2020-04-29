@@ -1,0 +1,145 @@
+body {
+    color: $colour-primary;
+    font-family: $font-primary;
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: inherit;
+    width: 100%;
+    margin: 0;
+	line-height: 1.2;
+
+    + p {
+        margin-top: 10px;
+    }
+}
+
+h1 {
+	font-size: 40px;
+	opacity: 0.9;
+	color: $colour-white;
+	text-shadow: 1px 1px 10px $colour-primary;
+}
+
+h2 {
+	font-size: 34px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0.02em;
+}
+
+h6 {
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: 0.02em;
+}
+
+strong h6,
+h6 strong {
+	color: $colour-accent;
+}
+
+p {
+    margin: 0;
+    display: block;
+    width: 100%;
+    color: inherit;
+	letter-spacing: 0.04em;
+}
+
+a {
+	text-decoration: none;
+	color: $colour-accent;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-black {
+	color: $colour-black;
+}
+
+.text-accent {
+	color: $colour-accent;
+}
+
+.text-secondary {
+	color: $colour-secondary;
+}
+
+.text-white {
+	color: $colour-white;
+}
+
+.text-primary {
+	color: $colour-primary;
+}
+
+.text-lower {
+	text-transform: lowercase;
+}
+
+.msg-success {
+    color: $colour-green;
+    display: inline-block;
+    width: auto;
+}
+
+.msg-error {
+    color: $colour-red;
+    margin-top: 5px;
+}
+
+.logo {
+	@include transition;
+	font-size: 40px;
+    color: $colour-secondary;
+    opacity: 0.2;
+    font-weight: bold;
+	line-height: 1.5;
+	margin-left: auto;
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+::selection {
+    background: $colour-primary;
+    color: $colour-white;
+}
+
+::-moz-selection {
+    background: $colour-primary;
+    color: $colour-white;
+}

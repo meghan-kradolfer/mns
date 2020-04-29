@@ -1,0 +1,6 @@
+title: Locations
+route: 'locations/{slug}'
+blueprints:
+  - locations
+orderable: true
+revisions: false

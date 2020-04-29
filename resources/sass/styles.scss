@@ -1,0 +1,40 @@
+// Libraries
+@import '00-vendor/normalize';
+@import '00-vendor/slick';
+
+// Tools
+@import '00-tools/variables';
+@import '00-tools/mixins';
+
+// Base
+@import '01-base/structure';
+@import '01-base/support';
+@import '01-base/helpers';
+
+// Atoms
+@import '02-atoms/typography';
+@import '02-atoms/media';
+
+// Molecules
+@import '03-molecules/excerpts';
+
+.template-locations {
+	.bg-image {
+		position: relative;
+
+		&.main {
+			height: 500px;
+			margin-bottom: 30px;
+			border-radius: 5px;
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+		}
+
+		.sub-title {
+			background-color: rgba($colour-primary, 0.8);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 20px 10px;
+		}
+	}
+}

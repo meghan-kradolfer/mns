@@ -1,0 +1,44 @@
+.bg-grey {
+    background-color: $colour-grey;
+    color: $colour-secondary;
+}
+
+.bg-accent {
+    background-color: $colour-accent;
+    color: $colour-white;
+}
+
+.bg-primary {
+    background-color: $colour-primary;
+    color: $colour-white;
+}
+
+.bg-secondary {
+    background-color: $colour-secondary;
+    color: $colour-white;
+}
+
+.bg-white {
+    color: $colour-dolphin;
+    background-color: $colour-white;
+}
+
+.hide {
+    display: none !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.align-left {
+    margin-right: auto;
+}
+
+.align-center {
+    margin: 0 auto;
+}

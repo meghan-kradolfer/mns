@@ -1,0 +1,37 @@
+// Colours | Primary
+$colour-primary: #3B3939;
+$colour-secondary: #937C65;
+$colour-accent: #B89B7E;
+
+// Colours | Supplementary
+$colour-bay: #223a76;
+$colour-dolphin: #69667c;
+$colour-alto: #e0e0e0;
+$colour-athens: #f3f5f8;
+$colour-oslo: #7c878e;
+$colour-mystic: #e0e5ec;
+$colour-flamingo: #f15922;
+$colour-salmon: #ff7777;
+$colour-red: #ff001f;
+$colour-green: #9cf192;
+
+// Colours | Default
+$colour-white: #ffffff;
+$colour-black: #000000;
+$colour-grey: $colour-athens;
+
+// Font | Family
+$font-primary: 'Poppins', sans-serif;
+
+// Media | Queries
+$screen-small: 600px;
+$screen-medium: 1000px;
+$screen-large: 1200px;
+$screen-xlarge: 1300px;
+
+// Sizing
+$column-gap: 40px;
+$grid-columns: 12;
+
+$header-desktop: 104px;
+$header-mobile: 81px;

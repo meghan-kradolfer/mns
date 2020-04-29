@@ -1,0 +1,101 @@
+title: Locations
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: length_days
+        field:
+          options:
+            under1day: '< 1 day'
+            1day: '1 day'
+            2days: '2 days'
+            '3 days': '3 days'
+            '4 days': '4 days'
+            over5days: '> 5 days'
+          clearable: false
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          localizable: false
+          width: 50
+          listable: hidden
+          display: 'Length (days)'
+      -
+        handle: location_region
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          width: 50
+          listable: hidden
+          display: 'Location (region)'
+      -
+        handle: google_maps_link
+        field:
+          placeholder: 'https://...'
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Google maps link'
+      -
+        handle: featured_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          localizable: false
+          listable: hidden
+          display: 'Featured image'
+      -
+        handle: content
+        field:
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          localizable: false
+          listable: hidden
+          display: Content
+      -
+        handle: additional_images
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          type: assets
+          localizable: false
+          listable: hidden
+          display: 'Additional images'
+      -
+        handle: additional_info_link
+        field:
+          placeholder: 'https://...'
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Additional info link'

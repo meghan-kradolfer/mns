@@ -1,0 +1,54 @@
+.alert-browser {
+    display: none;
+}
+
+/* Outdated browsers
+--------------------------------------*/
+
+[class*='firefox-2'],
+[class*='firefox-1'],
+.lt-ie10,
+.safari-9,
+.safari-8,
+.safari-7,
+.safari-6,
+.safari-5,
+.safari-4,
+.safari-3,
+.safari-2,
+.safari-1 {
+    .alert-browser {
+        display: block;
+    }
+
+    [class*='col'] {
+        display: inline-block !important;
+        margin: 0 !important;
+    }
+
+    ul.nav li {
+        display: inline-block !important;
+    }
+}
+
+/* Print
+--------------------------------------*/
+
+@include print {
+	body {
+		zoom: 60%;
+		-webkit-print-color-adjust: exact;
+	}
+
+	.navigation-header,
+	.navigation-extras,
+	.navigation-mobile,
+	.collections-default-template .btn-back,
+	.collections-default-template .fa-print {
+		opacity: 0;
+	}
+
+	.navigation-footer {
+		display: none;
+	}
+}
