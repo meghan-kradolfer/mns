@@ -27,6 +27,11 @@
 				background-color: rgba($colour-primary, 0.5);
 			}
 
+			.icons {
+				@include flex($justify: end);
+				padding: 10px;
+			}
+
 			.desc {
 				position: absolute;
 				bottom: 0;

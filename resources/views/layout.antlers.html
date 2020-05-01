@@ -5,7 +5,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ title ?? site_name }}</title>
+	<title>{{ title }} | {{ settings:site_name }} </title>
+
+	<link rel="icon" href="/favicon.ico" type="image/ico">
+
 	<!-- Fonts: Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,500&display=swap" rel="stylesheet">
@@ -19,7 +22,7 @@
 
 <body class="template-{{ segment_1 or "home" }}">
 	<main class="row-medium bg-white">
-		<a class="logo" href="/">M&S</a>
+		<a class="logo" href="/">{{ settings:site_name }}</a>
 
 		<div class="col-12">
 			{{ template_content }}

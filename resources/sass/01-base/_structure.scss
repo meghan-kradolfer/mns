@@ -8,7 +8,7 @@ body {
 
 body {
 	@include scrollbar;
-	background: url('../../../public/assets/bg-image.jpg');
+	background: url('/images/bg-image.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
     position: relative;

@@ -1,0 +1,11 @@
+title: "Global Settings"
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: site_name
+        field:
+          character_limit: 0
+          type: text
+          localizable: false
+          display: "Site Name"

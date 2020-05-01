@@ -1,0 +1,27 @@
+.icon-adventure {
+	@include flex($align-items: center, $justify: center);
+	position: relative;
+	border-radius: 100%;
+	overflow: hidden;
+	height: 35px;
+	width: 35px;
+	margin-left: 10px;
+
+	&:before {
+		content: '';
+		background-color: $colour-white;
+		border-radius: 100%;
+		backdrop-filter: blur(3px);
+		opacity: 0.3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	i {
+		position: relative;
+
+	}
+}

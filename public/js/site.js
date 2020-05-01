@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/meghan.kradolfer/Documents/Repos/_/mns2/resources/js/site.js */"./resources/js/site.js");
-module.exports = __webpack_require__(/*! /Users/meghan.kradolfer/Documents/Repos/_/mns2/resources/sass/styles.scss */"./resources/sass/styles.scss");
+__webpack_require__(/*! /Users/meghan.kradolfer/Documents/Repos/_/mns/resources/js/site.js */"./resources/js/site.js");
+module.exports = __webpack_require__(/*! /Users/meghan.kradolfer/Documents/Repos/_/mns/resources/sass/styles.scss */"./resources/sass/styles.scss");
 
 
 /***/ })

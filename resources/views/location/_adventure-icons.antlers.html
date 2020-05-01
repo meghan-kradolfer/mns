@@ -1,0 +1,35 @@
+{{ adventure_type }}
+		<span class="icon-adventure">
+			{{ if slug == 'hiking' || slug == 'hike' || slug == 'walk' }}
+				<i class="fas fa-hiking"></i>
+			{{ /if }}
+
+			{{ if slug == 'mountain' || slug == 'mountains' }}
+				<i class="fas fa-mountain"></i>
+			{{ /if }}
+
+			{{ if slug == 'climbing' || slug == 'climb' }}
+				<i class="fas fa-hand-rock"></i>
+			{{ /if }}
+
+			{{ if slug == 'biking' || slug == 'bike' }}
+				<i class="fas fa-biking"></i>
+			{{ /if }}
+
+			{{ if slug == 'swimming' || slug == 'swim' }}
+				<i class="fas fa-swimmer"></i>
+			{{ /if }}
+
+			{{ if slug == 'kayaking' || slug == 'kayak' }}
+				<i class="fas fa-swimmer"></i>
+			{{ /if }}
+
+			{{ if slug == 'running' || slug == 'run' || slug == 'trail run' || slug == 'trail running' }}
+				<i class="fas fa-running"></i>
+			{{ /if }}
+
+			{{ if slug == 'skiing' || slug == 'ski' || slug == 'snowboard' || slug == 'snowboarding' }}
+				<i class="fas fa-skiing"></i>
+			{{ /if }}
+		</span>		
+{{ /adventure_type }}
