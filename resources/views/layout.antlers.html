@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ title }} | {{ settings:site_name }} </title>
 
-	<link rel="icon" href="{{ settings:favicon }}" type="image/ico">
+	<link rel="icon" href="{{ glide:settings:favicon }}" type="image/ico">
 
 	<!-- Fonts: Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="{{ mix src='css/styles.css' }}">
 	<style>
 		body {
-			background: url('{{ settings:background_image }}');
+			background: url('{{ glide:settings:background_image width="2000" }}');
 		}
 	</style>
 </head>
