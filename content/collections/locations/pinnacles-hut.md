@@ -4,7 +4,7 @@ location_region: 'Mount Somers'
 featured_image: 980.20-tramper-david-barnes-pinnacles-hut-mt-somers-track-hakatere-cp-canterbury.jpg
 updated_by: fbe90c3d-4870-4a02-9423-87030abb3a92
 updated_at: 1588191691
-length_days: 2days
+length_days: '2 days'
 adventure_type:
   - hiking
   - climbing

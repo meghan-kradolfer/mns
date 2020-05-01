@@ -1,6 +1,6 @@
 ---
 title: 'Mueller Hut'
-length_days: 2days
+length_days: '2 days'
 location_region: Aoraki
 featured_image: mueller-hut-1600.jpg
 updated_by: fbe90c3d-4870-4a02-9423-87030abb3a92
