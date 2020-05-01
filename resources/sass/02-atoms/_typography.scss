@@ -69,6 +69,10 @@ p {
 a {
 	text-decoration: none;
 	color: $colour-accent;
+
+	&.border {
+		border-bottom: 1px solid currentColor;
+	}
 }
 
 .uppercase {

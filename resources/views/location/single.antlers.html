@@ -1,6 +1,10 @@
 <section class="row">
 	<div class="col-12">
-		<div class="bg-image main" {{ assets:featured_image }}style="background-image: url({{ glide:url width='2000' }}); background-position: {{ focus_css }};" {{ /assets:featured_image }}>
+		<div class="bg-image main" {{ assets:featured_image }}style="background-image: url({{ glide:url width='2000' }});" {{ /assets:featured_image }}>
+			<div class="icons">
+				{{ partial:location/adventure-icons colour="light" }}
+			</div>
+
 			<div class="row sub-title text-white align-center">
 				<div class="col-6">
 					<h1>{{ title }}</h1>
@@ -12,8 +16,31 @@
 		</div>
 	</div>
 
-	<div class="col-12 rte">
+	<div class="col-12 rte mb-2">
 		<h4>Information</h4>
+		<hr />
+		{{ if length_days }}
+		<p><strong>Length: </strong> {{ length_days }}</p>
+		{{ /if }}
+
+		{{ if google_maps_link }}
+		<p><strong>Location: </strong> <a href="{{ google_maps_link }}" target="_blank" class="border">{{ location_region }} -> get directions here</a></p>
+		{{ /if }}
+
+		{{ if additional_info_link }}
+		<p><strong>Read more: </strong> <a href="{{ additional_info_link }}" target="_blank">{{ additional_info_link }}</a></p>
+		{{ /if }}
+	</div>
+
+	<div class="col-12 rte">
 		{{ content }}
 	</div>
+
+	{{ if additional_images }}
+	<div class="col-12 rte pt-4">
+		{{ assets:additional_images }}
+			<img src="{{ glide:url }}" />
+		{{ /assets:additional_images }}
+	</div>
+	{{ /if }}
 </section>

@@ -1,27 +1,49 @@
+.icons {
+    @include flex($justify: end);
+    padding: 10px;
+}
+
 .icon-adventure {
-	@include flex($align-items: center, $justify: center);
-	position: relative;
-	border-radius: 100%;
-	overflow: hidden;
-	height: 35px;
-	width: 35px;
-	margin-left: 10px;
+    @include flex($align-items: center, $justify: center);
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
 
-	&:before {
-		content: '';
-		background-color: $colour-white;
-		border-radius: 100%;
-		backdrop-filter: blur(3px);
-		opacity: 0.3;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
+    &:before {
+        content: '';
+        border-radius: 100%;
+        backdrop-filter: blur(3px);
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &.light{
+		&:before {
+			background-color: $colour-white;
+		}
+			
+		i {
+			color: $colour-white;
+		}
 	}
 
-	i {
-		position: relative;
-
+    &.dark{
+		&:before {
+			background-color: $colour-primary;
+		}
+		i {
+		 color: $colour-primary;
+		}
 	}
+
+    i {
+        position: relative;
+    }
 }

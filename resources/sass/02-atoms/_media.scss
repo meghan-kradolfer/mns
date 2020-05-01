@@ -4,3 +4,13 @@
     background-position: center;
     background-color: $colour-white;
 }
+
+.rte {
+	img {
+		display: inline-block;
+
+		&:not(:only-child) {
+			margin-right: 20px;
+		}
+	}
+}

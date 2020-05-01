@@ -7,12 +7,12 @@ sections:
         handle: length_days
         field:
           options:
-            under1day: '< 1 day'
-            1day: '1 day'
-            2days: '2 days'
+            '< 1 day': '< 1 day'
+            '1 day': '1 day'
+            '2 days': '2 days'
             '3 days': '3 days'
             '4 days': '4 days'
-            over5days: '> 5 days'
+            '> 5 days': '> 5 days'
           clearable: false
           multiple: false
           searchable: true
