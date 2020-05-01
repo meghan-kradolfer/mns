@@ -1,4 +1,6 @@
 title: Settings
 blueprint: settings
 data:
-  site_name: "M&S"
+  site_name: 'M&S'
+  background_image: bg-image-1588375184.jpg
+  favicon: favicon.png

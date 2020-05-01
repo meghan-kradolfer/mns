@@ -1,11 +1,36 @@
-title: "Global Settings"
+title: 'Global Settings'
 sections:
   main:
     display: Main
     fields:
-      - handle: site_name
+      -
+        handle: site_name
         field:
           character_limit: 0
           type: text
           localizable: false
-          display: "Site Name"
+          display: 'Site Name'
+      -
+        handle: background_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          localizable: false
+          listable: hidden
+          display: 'Background image'
+          width: 75
+      -
+        handle: favicon
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          localizable: false
+          listable: hidden
+          display: Favicon
+          width: 25
