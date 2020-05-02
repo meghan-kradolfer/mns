@@ -1,4 +1,7 @@
 <section class="row">
+	<div class="col-12 pb-1">
+		<h5><a href="/" class="border">< Back</a></h5>
+	</div>
 	<div class="col-12">
 		<div class="bg-image main" {{ assets:featured_image }}style="background-image: url({{ glide:url width='2000' }});" {{ /assets:featured_image }}>
 			<div class="icons">
@@ -17,7 +20,7 @@
 	</div>
 
 	<div class="col-12 rte mb-2">
-		<h4>Information</h4>
+		<h2>Information</h2>
 		<hr />
 		{{ if length_days }}
 		<p><strong>Length: </strong> {{ length_days }}</p>
@@ -30,17 +33,21 @@
 		{{ if additional_info_link }}
 		<p><strong>Read more: </strong> <a href="{{ additional_info_link }}" target="_blank">{{ additional_info_link }}</a></p>
 		{{ /if }}
+
+		<hr />
 	</div>
 
-	<div class="col-12 rte">
+	<div class="col-md-9 col-sm-12 rte">
 		{{ content }}
 	</div>
 
 	{{ if additional_images }}
 	<div class="col-12 rte pt-4">
-		{{ assets:additional_images }}
+		<div class="gallery">
+			{{ assets:additional_images }}
 			<img src="{{ glide:url }}" />
-		{{ /assets:additional_images }}
+			{{ /assets:additional_images }}
+		</div>
 	</div>
 	{{ /if }}
 </section>

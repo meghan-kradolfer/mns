@@ -57,7 +57,6 @@ sections:
         handle: content
         field:
           buttons:
-            - h2
             - h3
             - bold
             - italic

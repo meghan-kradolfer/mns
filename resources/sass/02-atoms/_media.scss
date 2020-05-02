@@ -6,11 +6,27 @@
 }
 
 .rte {
-	img {
-		display: inline-block;
+    // img {
+    // 	display: inline-block;
 
-		&:not(:only-child) {
-			margin-right: 20px;
-		}
-	}
+    // 	&:not(:only-child) {
+    // 		margin-right: 20px;
+    // 	}
+    // }
+}
+
+.gallery {
+    column-width: 350px;
+    column-gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+	margin: 50px auto;
+	
+    img {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        margin: 0 2px 15px;
+        transition: opacity 0.4s ease-in-out;
+        display: inline-block;
+        column-break-inside: avoid;
+    }
 }
